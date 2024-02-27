@@ -22,7 +22,6 @@ namespace AddressBook_Kyle
         {
             try
             {
-                // Read contacts from CSV file
                 using (StreamReader reader = new StreamReader("contacts.csv"))
                 {
                     string line;
@@ -32,8 +31,6 @@ namespace AddressBook_Kyle
                         contacts.Add(contactInfo);
                     }
                 }
-
-                // Populate list box with loaded contacts
                 foreach (var contact in contacts)
                 {
                     ListofContacts.Items.Add($"{contact[0]}, {contact[1]}, {contact[2]}, {contact[3]}");
@@ -49,7 +46,6 @@ namespace AddressBook_Kyle
         {
             try
             {
-                // Write contacts to CSV file
                 using (StreamWriter writer = new StreamWriter("contacts.csv"))
                 {
                     foreach (var contact in contacts)
@@ -66,20 +62,18 @@ namespace AddressBook_Kyle
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            // Navigate to AddUpdateContactWindow for adding a new contact
             AddUpdateContactWindow addUpdateContactWindow = new AddUpdateContactWindow();
             if (addUpdateContactWindow.ShowDialog() == true)
             {
                 string[] newContact = { addUpdateContactWindow.Name, addUpdateContactWindow.Address, addUpdateContactWindow.PhoneNumber, addUpdateContactWindow.Email };
                 contacts.Add(newContact);
                 ListofContacts.Items.Add($"{newContact[0]}, {newContact[1]}, {newContact[2]}, {newContact[3]}");
-                SaveContacts(); // Save contacts after adding
+                SaveContacts();
             }
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            // Navigate to AddUpdateContactWindow for updating an existing contact
             if (ListofContacts.SelectedIndex != -1)
             {
                 string[] selectedContact = contacts[ListofContacts.SelectedIndex];
@@ -92,7 +86,7 @@ namespace AddressBook_Kyle
                     selectedContact[2] = addUpdateContactWindow.PhoneNumber;
                     selectedContact[3] = addUpdateContactWindow.Email;
                     ListofContacts.Items[ListofContacts.SelectedIndex] = $"{selectedContact[0]}, {selectedContact[1]}, {selectedContact[2]}, {selectedContact[3]}";
-                    SaveContacts(); // Save contacts after updating
+                    SaveContacts();
                 }
             }
             else
@@ -104,14 +98,12 @@ namespace AddressBook_Kyle
         private void searchTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             string searchTerm = searchTextBox.Text.ToLower();
-            ListofContacts.Items.Clear(); // Clear existing items
+            ListofContacts.Items.Clear();
 
             foreach (var contact in contacts)
             {
-                // Concatenate contact fields for searching
                 string contactInfo = string.Join(",", contact).ToLower();
 
-                // Check if any field contains the search term
                 if (contactInfo.Contains(searchTerm))
                 {
                     ListofContacts.Items.Add($"{contact[0]}, {contact[1]}, {contact[2]}, {contact[3]}");
