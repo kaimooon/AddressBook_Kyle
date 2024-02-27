@@ -15,6 +15,9 @@
         </TextBox>
         <Button Content="Add" Click="AddButton_Click" Margin="283,102,423,277" Grid.Row="1" />
         <Button Content="Update" Click="UpdateButton_Click" Margin="382,102,340,277" Grid.Row="1" />
-        <ListBox x:Name="ListofContacts" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="79,174,79,103"/>
+        <ListBox x:Name="ListofNames" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="81,200,616,77"/>
+        <ListBox x:Name="ListofAddress" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="207,200,490,77"/>
+        <ListBox x:Name="ListofPhoneNumber" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="348,200,348,77"/>
+        <ListBox x:Name="ListofEmail" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="487,200,209,77"/>
     </Grid>
 </Window>
