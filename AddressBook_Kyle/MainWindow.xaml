@@ -15,9 +15,13 @@
         </TextBox>
         <Button Content="Add" Click="AddButton_Click" Margin="283,102,423,277" Grid.Row="1" />
         <Button Content="Update" Click="UpdateButton_Click" Margin="382,102,340,277" Grid.Row="1" />
-        <ListBox x:Name="ListofNames" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="81,200,616,77"/>
-        <ListBox x:Name="ListofAddress" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="207,200,490,77"/>
-        <ListBox x:Name="ListofPhoneNumber" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="348,200,348,77"/>
-        <ListBox x:Name="ListofEmail" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="487,200,209,77"/>
+        <ListBox x:Name="ListofNames" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="81,200,575,77"/>
+        <ListBox x:Name="ListofAddress" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="250,200,427,77"/>
+        <ListBox x:Name="ListofPhoneNumber" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,200,267,77"/>
+        <ListBox x:Name="ListofEmail" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="570,200,42,77"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="81,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="128"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="250,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="107"/>
+        <Label Content="Phone Number" HorizontalAlignment="Left" Margin="400,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="116"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="570,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="171"/>
     </Grid>
 </Window>
