@@ -5,23 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AddressBook_Kyle"
         mc:Ignorable="d"
-        Title="Address Book" Height="450" Width="800">
+        Title="Address Book" Height="450" Width="907">
     <Grid Background="#FFD093DE">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="searchTextBox" Margin="277,32,0,337" Grid.Row="1" RenderTransformOrigin="0.5,0.5" TextChanged="searchTextBox_TextChanged" HorizontalAlignment="Left" Width="239" >
+        <TextBox x:Name="searchTextBox" Margin="0,101,0,278" Grid.Row="1" RenderTransformOrigin="0.5,0.5" TextChanged="SearchTextBox_TextChanged" HorizontalAlignment="Center" Width="238" FontSize="18" >
         </TextBox>
-        <Button Content="Add" Click="AddButton_Click" Margin="306,102,400,277" Grid.Row="1" />
-        <Button Content="Update" Click="UpdateButton_Click" Margin="419,102,303,277" Grid.Row="1" />
-        <ListBox x:Name="ListofNames" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="81,200,575,77"/>
-        <ListBox x:Name="ListofAddress" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="250,200,427,77"/>
-        <ListBox x:Name="ListofPhoneNumber" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,200,267,77"/>
-        <ListBox x:Name="ListofEmail" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="570,200,42,77"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="81,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="128"/>
-        <Label Content="Address" HorizontalAlignment="Left" Margin="250,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="107"/>
-        <Label Content="Phone Number" HorizontalAlignment="Left" Margin="400,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="116"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="570,169,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="171"/>
+        <Button Content="Add" Click="AddButton_Click" Margin="306,144,453,235" Grid.Row="1" Background="#FFB542F9" FontFamily="Arial" FontWeight="Bold" FontSize="14" />
+        <Button Content="Update" Click="UpdateButton_Click" Margin="468,144,303,235" Grid.Row="1" Background="#FFB542F9" FontSize="14" FontFamily="Arial" FontWeight="Bold" />
+        <Label Content="Name" HorizontalAlignment="Left" Margin="78,214,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="165" FontSize="20" FontFamily="Ink Free" FontWeight="Bold"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="281,214,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="108" FontSize="20" FontFamily="Ink Free" FontWeight="Bold"/>
+        <Label Content="Phone Number" HorizontalAlignment="Left" Margin="441,214,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="149" FontSize="20" FontFamily="Ink Free" FontWeight="Bold"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="646,214,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="190" FontSize="20" FontFamily="Ink Free" FontWeight="Bold"/>
+        <ComboBox x:Name="Name_Box" HorizontalAlignment="Left" Margin="78,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" SelectionChanged="Name_Box_SelectionChanged_1" FontSize="17"/>
+        <TextBox x:Name="Address" HorizontalAlignment="Left" Margin="281,257,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="108" FontSize="17"/>
+        <TextBox x:Name="Phone_Number" HorizontalAlignment="Left" Margin="441,259,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" FontSize="17"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="646,259,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190" FontSize="17"/>
+        <Label x:Name="Label" Content="Address Book" HorizontalAlignment="Center" Margin="0,11,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Ink Free" Height="85" Width="438" FontSize="72"/>
     </Grid>
 </Window>
