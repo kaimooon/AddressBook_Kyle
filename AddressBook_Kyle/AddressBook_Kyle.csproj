@@ -101,5 +101,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="aesthetic-minimal-cute-pastel-pink-wallpaper-illustration-perfect-wallpaper-backdrop-postcard-background-banner_565280-812.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="6e806929aae6861db851a467d20f7135.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

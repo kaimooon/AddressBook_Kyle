@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:AddressBook_Kyle"
         mc:Ignorable="d"
         Title="Add/Update Contact" Height="402" Width="400">
-    <Grid Background="#FFD093DE" Margin="0,0,0,-44">
+    <Grid Margin="0,0,0,-44">
+        <Grid.Background>
+            <ImageBrush ImageSource="/aesthetic-minimal-cute-pastel-pink-wallpaper-illustration-perfect-wallpaper-backdrop-postcard-background-banner_565280-812.jpg" Stretch="Fill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>

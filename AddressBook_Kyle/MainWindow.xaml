@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:AddressBook_Kyle"
         mc:Ignorable="d"
         Title="Address Book" Height="450" Width="907">
-    <Grid Background="#FFD093DE">
+    <Window.Background>
+        <ImageBrush ImageSource="/aesthetic-minimal-cute-pastel-pink-wallpaper-illustration-perfect-wallpaper-backdrop-postcard-background-banner_565280-812.jpg"/>
+    </Window.Background>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -20,9 +23,9 @@
         <Label Content="Phone Number" HorizontalAlignment="Left" Margin="441,214,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="149" FontSize="20" FontFamily="Ink Free" FontWeight="Bold"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="646,214,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FF6FDAE8" Width="190" FontSize="20" FontFamily="Ink Free" FontWeight="Bold"/>
         <ComboBox x:Name="Name_Box" HorizontalAlignment="Left" Margin="78,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" SelectionChanged="Name_Box_SelectionChanged_1" FontSize="17"/>
-        <TextBox x:Name="Address" HorizontalAlignment="Left" Margin="281,257,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="108" FontSize="17"/>
-        <TextBox x:Name="Phone_Number" HorizontalAlignment="Left" Margin="441,259,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" FontSize="17"/>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="646,259,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190" FontSize="17"/>
+        <TextBox x:Name="Address" Opacity="100" HorizontalAlignment="Left" Margin="281,257,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="108" FontSize="17" IsEnabled="False"/>
+        <TextBox x:Name="Phone_Number" HorizontalAlignment="Left" Margin="441,259,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" FontSize="17" IsEnabled="False"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="646,259,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190" FontSize="17" IsEnabled="False"/>
         <Label x:Name="Label" Content="Address Book" HorizontalAlignment="Center" Margin="0,11,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Ink Free" Height="85" Width="438" FontSize="72"/>
     </Grid>
 </Window>
